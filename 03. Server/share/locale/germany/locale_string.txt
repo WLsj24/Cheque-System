@@ -1,0 +1,23 @@
+"			ENABLE_CHEQUE_SYSTEM			";
+"			ENABLE_CHEQUE_SYSTEM			";
+
+"You can't create a shop with more than %d won.";
+"You can't create a shop with more than %d won.";
+
+"Cheque: ADD[%d] TOTAL[%d]";
+"Won: Added[%d] Total[%d]";
+
+"You can't do it.";
+"You can't do it.";
+
+"You can't trade because the other character exceeds 999 won.";
+"You can't trade because the other character exceeds 999 won.";
+
+"			ENABLE_OFFLINE_SHOP_USE_CHEQUE			";
+"			ENABLE_OFFLINE_SHOP_USE_CHEQUE			";
+
+"SHOP_CHEQUE_ADD";
+"The Won has been added to your inventory successfully.";
+
+"You can't exceed the limit of 99 won.";
+"You can't exceed the limit of 99 won.";

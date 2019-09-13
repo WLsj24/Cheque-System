@@ -1,0 +1,22 @@
+GAME_PICK_CHEQUE	You have received %d Won.
+DROP_CHEQUE_FAILURE_1000_OVER	You can drop a maximum of 999 Won.
+DO_YOU_DROP_CHEQUE	¿Do you want drop %d Won?
+CHEQUE_SYSTEM_UNIT_WON	Won
+CHEQUE_ONLY_VALUE	You can only enter a value.
+CHEQUE_NO_ADD_SALE_PRICE	You must enter at least one sale price. If you don't want to put a price, then enter "0".
+CHEQUE_SYSTEM_SELL_PRICE	[Sales price]
+CHEQUE_SYSTEM_YANG	%s 
+CHEQUE_SYSTEM_WON	%s 
+DO_YOU_SELL_ITEM1	Do you want to sell %s for %s Yang?
+DO_YOU_SELL_ITEM2	Do you want to sell %s (%s lots) for %s Yang?
+CHEQUE_SYSTEM_DO_NOT_DROP_MONEY	You can't drop money.
+CHEQUE_SYSTEM_UNIT_CHEQUE	Won
+CHEQUE_SYSTEM_UNIT_YANG	Yang
+CHEQUE_SYSTEM_CHEQUE	%s Won
+SHOP_NOT_ENOUGH_CHEQUE	You don't have enough Won.
+SHOP_NOT_ENOUGH_MONEY_CHEQUE	You don't have enough Won or Yang.
+DO_YOU_BUY_ITEM1_CHEQUE	Do you want to buy %s for %s Won and %s Yang?
+DO_YOU_BUY_ITEM2_CHEQUE	Do you want to buy %s (%s lots) for %s Won and %s Yang?
+DO_YOU_DROP_CHEQUE	Do you want drop %d Won?
+DO_YOU_BUY_ITEM1_CHEQUE1	Do you want to buy %s for %s and 0 Yang?
+DO_YOU_BUY_ITEM2_CHEQUE1	Do you want to buy %s (%s lots) for %s and 0 Yang?

@@ -1,0 +1,76 @@
+--[[
+	Quest of CHEQUE_SYSTEM for Storekeeper
+	Released by: WLsj24
+--]]
+quest cheque_system begin
+	state start begin
+
+		when 9005.chat."Exchange Bureau" begin --10043
+			local menu = select("Won to Yang", "Yang to Won", "Cancel") --10045, 10046, 10044
+			if menu == 3 then return end
+			if menu == 1 then
+				say("Won to Yang") --10050
+				say("How many Won do you want to exchange into Yang?[ENTER]1 Won = 100,000,000 Yang") --10048
+				say("Min. 1 Won - Max. 19 Won") --10049
+				local amount = tonumber(input())
+				if ((amount < 1) or (amount >19) or (amount == nil)) then
+					say("Please check the figures and try again.[ENTER][ENTER]Max. amount of Won = 999[ENTER]Max. amount of Yang = 1 999 999 999") --10032
+					return
+				else
+					say("Won to Yang") --10045
+					local yang = 100000000
+					local total = amount*yang
+					say(string.format("Are you sure you want to exchange %d Won into %d Yang?", amount, total)) --10033
+					local s = select("Exchange", "Cancel") --10034, 10035
+					if s == 2 then return end
+					if pc.get_cheque() >= amount then
+						if pc.get_gold() + total < 2000000000 then
+							pc.set_cheque(-amount)
+							pc.change_gold(total)
+							return
+						else
+							syschat("You can't exceed the Yang limit.")
+							return
+						end
+					else
+						syschat("You don't have enough Won.")
+						return
+					end
+				end
+			elseif menu == 2 then
+				say("Yang to Won") --10036
+				say("How many Won do you want to receive?[ENTER]1 Won = 100,000,000 Yang") --10037
+				say("Min. 1 Won - Max. 19 Won") --10038
+				local amount = tonumber(input())
+				if ((amount < 1) or (amount >19) or (amount == nil)) then
+					say("Please check the figures and try again.[ENTER][ENTER]Max. amount of Won = 999[ENTER]Max. amount of Yang = 1 999 999 999") --10032
+					return
+				else
+					say("Yang to Won") --10036
+					local won = 100000000
+					local tax = amount*won*0.03
+					local total = ((amount*won)+tax)
+					say("Tax: 3%")
+					say(string.format("Do you want to exchange %d Yang into %d Won?", total, amount)) --10041
+					local s = select("Exchange", "Cancel") --10042, 10044
+					if s == 2 then return end
+					if pc.get_gold() >= total then
+						if pc.get_cheque() + amount < 100 then
+							pc.change_money(-total)
+							pc.set_cheque(amount)
+							syschat(string.format("You have received %d Won.", amount))
+							return
+						else
+							syschat("You can't exceed the limit of Won.")
+							return
+						end
+					else
+						syschat("You don't have enough Yang.") --716
+						return
+					end
+				end
+			end --menu
+		end --when
+
+	end --state
+end --quest
