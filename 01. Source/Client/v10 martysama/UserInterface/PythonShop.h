@@ -13,7 +13,7 @@ Replace with:
 /*Search:
 	int GetPrivateShopItemPrice(TItemPos ItemPos);
 
-Replace with:
+Add after:
 */
 #ifdef ENABLE_CHEQUE_SYSTEM
 	int GetPrivateShopItemCheque(TItemPos ItemPos);
