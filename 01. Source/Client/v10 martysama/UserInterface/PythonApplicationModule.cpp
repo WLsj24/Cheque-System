@@ -22,4 +22,10 @@ Add BEFORE:
 #else
 	PyModule_AddIntConstant(poModule, "ENABLE_GEM_SYSTEM", 0);
 #endif
+
+#ifdef ENABLE_NEW_EXCHANGE_WINDOW
+	PyModule_AddIntConstant(poModule, "ENABLE_NEW_EXCHANGE_WINDOW", 1);
+#else
+	PyModule_AddIntConstant(poModule, "ENABLE_NEW_EXCHANGE_WINDOW", 0);
+#endif
 /*--------------------------------------------------*/
