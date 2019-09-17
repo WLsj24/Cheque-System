@@ -3,8 +3,9 @@
 		self.OwnerMoneyButton.SetEvent(ui.__mem_func__(self.OpenPickMoneyDialog))
 
 #Add after:
-		if app.ENABLE_CHEQUE_SYSTEM:
+		if app.ENABLE_CHEQUE_SYSTEM and app.ENABLE_NEW_EXCHANGE_WINDOW:
 			self.OwnerChequeIcon = self.GetChild("Owner_Cheque_Icon")
+		if app.ENABLE_CHEQUE_SYSTEM:
 			self.OwnerCheque = self.GetChild("Owner_Cheque_Value")
 			self.OwnerChequeButton = self.GetChild("Owner_Cheque")
 			self.OwnerChequeButton.SetEvent(ui.__mem_func__(self.OpenPickChequeDialog))
@@ -15,6 +16,7 @@
 #Add after:
 		if app.ENABLE_CHEQUE_SYSTEM:
 			self.TargetCheque = self.GetChild("Target_Cheque_Value")
+		if app.ENABLE_CHEQUE_SYSTEM and app.ENABLE_NEW_EXCHANGE_WINDOW:
 			self.TargetChequeIcon = self.GetChild("Target_Cheque_Icon")
 # ********************************************************************** #
 #Search:
@@ -28,7 +30,7 @@
 		self.OwnerMoneyButton = 0
 
 #Add after:
-		if app.ENABLE_CHEQUE_SYSTEM:
+		if app.ENABLE_CHEQUE_SYSTEM and app.ENABLE_NEW_EXCHANGE_WINDOW:
 			self.OwnerChequeIcon = 0
 # ********************************************************************** #
 #Search:
